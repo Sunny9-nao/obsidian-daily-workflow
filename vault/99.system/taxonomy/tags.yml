@@ -1,0 +1,34 @@
+# Tag Dictionary
+# This file defines approved tags, aliases, and rules for tag normalization
+
+approved:
+  book:
+    - "開発生産性の教科書"
+  tech:
+    - "playwright"
+    - "python"
+    - "sqlite"
+  topic:
+    - "workflow"
+    - "productivity"
+    - "reading"
+    - "metrics"
+    - "testing"
+    - "quality-assurance"
+    - "test-automation"
+    - "data-analysis"
+  src:
+    - "work"
+    - "personal"
+
+rules:
+  # Prefixes allowed for temporary/new tags
+  allow_new_prefix:
+    - "new"
+    - "tmp"
+
+# Aliases (synonyms) mapped to approved tags
+aliases:
+  pw: "tech:playwright"
+  py: "tech:python"
+  prod: "topic:productivity"

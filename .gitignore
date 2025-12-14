@@ -1,0 +1,51 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.coverage
+
+# DB (new structure)
+vault/99.system/db/*.sqlite
+vault/99.system/db/*.sqlite-*
+db/*.sqlite
+db/*.sqlite-*
+
+# Logs (new structure)
+vault/99.system/logs/*.log
+logs/*.log
+
+# Temporary files
+*.tmp
+.DS_Store
+
+# Generated files (can be regenerated)
+vault/view.md
+vault/01.index/*.md
+vault/01.index/books/*.md
+vault/01.index/tags/*.md
+vault/02.blog/drafts/*.md
+vault/02.blog/published/*.md
+index/*.md
+index/books/*.md
+index/tags/*.md
+
+# Daily notes (personal - exclude, but keep Templates)
+vault/00.daily/*.md
+!vault/00.daily/Templates/
+
+# Obsidian settings
+vault/.obsidian/workspace*.json      # Personal window layout
+vault/.obsidian/plugins/             # Plugin binaries (like node_modules)
+vault/.obsidian/app.json             # App settings (personal)
+vault/.obsidian/appearance.json      # Theme settings (personal)
+
+# Keep these Obsidian configs (team shared)
+# - core-plugins.json
+# - community-plugins.json
+# - daily-notes.json
+# - templates.json
+# - graph.json
+# - query.json

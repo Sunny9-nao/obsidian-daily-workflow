@@ -1,0 +1,11 @@
+{
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "vault/00\\.daily/.*\\.md$",
+        "cmd": "python scripts/etl.py && python scripts/build_index.py",
+        "isAsync": true
+      }
+    ]
+  }
+}
