@@ -505,7 +505,7 @@ def main():
     # Check if DB exists
     if not os.path.exists(db_path):
         logger.error(f"Database not found: {db_path}")
-        logger.error("Please run: sqlite3 db/notes.sqlite < init_db.sql")
+        logger.error("Please run: sqlite3 vault/99.system/db/notes.sqlite < init_db.sql")
         return 1
     
     # Initialize components

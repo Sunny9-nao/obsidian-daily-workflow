@@ -122,22 +122,6 @@
             }
           }
         ]
-      },
-      {
-        "id": "16c7268949f518e4",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "ddc3cf70d94a8eb8",
-            "type": "leaf",
-            "state": {
-              "type": "thino_view",
-              "state": {},
-              "icon": "Memos",
-              "title": "Thino"
-            }
-          }
-        ]
       }
     ],
     "direction": "horizontal",
@@ -216,14 +200,14 @@
       "graph:グラフビューを開く": false
     }
   },
-  "active": "9f48675349519f73",
+  "active": "2c8bdffccfca110d",
   "lastOpenFiles": [
-    "view.md",
+    "00.daily/Templates/Daily Note.md",
     "00.daily/2025-12-14.md",
+    "view.md",
     "Dashboard.md",
     "99.system/docs/0.requirements.md",
     "00.daily/Templates/Daily with Action.md",
-    "00.daily/Templates/Daily Note.md",
     "00.daily/Templates/Daily with Reading.md",
     "01.index/books/開発生産性の教科書.md",
     "99.system/docs/4.obsidian_setup.md",
