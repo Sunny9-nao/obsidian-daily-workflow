@@ -1,3 +1,35 @@
+---
+type: idea
+stage: idea # idea | design | done
+src: [[00.daily/2025-12-16#^20251216-i1]]
+owner:
+last-updated: 2025-12-16
+tags: [idea]
+---
+# README
+
+<!-- 必要に応じて、このノート内で自由にセクション（見出し）を追加・改名してOK -->
+
+## Summary
+- 
+
+## Problem / Why
+- 
+
+## Notes
+- 関連:
+- デイリー: [[00.daily/2025-12-16#^20251216-i1]]
+
+## 設計メモ（必要になったら追記）
+- 方針:
+- アーキ/フロー:
+- データ/I/F:
+- 論点・リスク:
+- マイルストーン: Draft → Review → Implement → Done
+
+## 決定事項 / TODO
+- 決定:
+- TODO: [ ]
 # Daily Note Templates
 
 Obsidian のデイリーノート機能で使用するテンプレート集です。
