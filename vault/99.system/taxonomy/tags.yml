@@ -4,10 +4,13 @@
 approved:
   book:
     - "開発生産性の教科書"
+  course:
+    - "Udemy_Ruby_Rails_SNS"
   tech:
     - "playwright"
     - "python"
     - "sqlite"
+    - "ruby"
   topic:
     - "workflow"
     - "productivity"
@@ -17,6 +20,13 @@ approved:
     - "quality-assurance"
     - "test-automation"
     - "data-analysis"
+    - "setup"
+    - "basics"
+    - "learning"
+    - "design"
+    - "ai"
+    - "etl"
+    - "blog"
   src:
     - "work"
     - "personal"

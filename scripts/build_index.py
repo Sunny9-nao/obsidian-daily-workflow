@@ -190,6 +190,35 @@ def get_book_list(conn: sqlite3.Connection) -> List[str]:
     return books
 
 
+def get_course_list(conn: sqlite3.Connection) -> List[str]:
+    """
+    Get list of unique course tags
+    
+    Args:
+        conn: Database connection
+        
+    Returns:
+        List of course names (without "course:" prefix)
+    """
+    cursor = conn.cursor()
+    
+    cursor.execute(
+        """
+        SELECT DISTINCT name FROM tags 
+        WHERE name LIKE 'course:%'
+        ORDER BY name
+        """
+    )
+    
+    courses = []
+    for (tag_name,) in cursor.fetchall():
+        # Extract course name (remove "course:" prefix)
+        course_name = tag_name.replace('course:', '', 1)
+        courses.append(course_name)
+    
+    return courses
+
+
 def build_book_index(conn: sqlite3.Connection, book_name: str) -> str:
     """
     Build index for a specific book
@@ -239,6 +268,66 @@ def build_book_index(conn: sqlite3.Connection, book_name: str) -> str:
         tag_str = ""
         if tags:
             # Show all tags except the current book tag
+            other_tags = [tag for tag in tags.split() if tag != tag_name]
+            if other_tags:
+                tag_str = " " + " ".join(f"#{tag}" for tag in other_tags)
+        
+        lines.append(f"- {date} [{item_type}]: ![[{source_path}#{block_id}]]{tag_str}")
+    
+    lines.append("")  # Trailing newline
+    
+    return "\n".join(lines)
+
+
+def build_course_index(conn: sqlite3.Connection, course_name: str) -> str:
+    """
+    Build index for a specific course
+    
+    Args:
+        conn: Database connection
+        course_name: Course name (without "course:" prefix)
+        
+    Returns:
+        Markdown content
+    """
+    cursor = conn.cursor()
+    
+    tag_name = f"course:{course_name}"
+    
+    # Get all items tagged with this course, oldest first (learning timeline)
+    cursor.execute(
+        """
+        SELECT i.date, i.source_path, i.block_id, i.type,
+               GROUP_CONCAT(t.name, ' ') as tags
+        FROM items i
+        JOIN item_tags it ON i.id = it.item_id
+        JOIN tags t ON it.tag_id = t.id
+        LEFT JOIN item_tags it2 ON i.id = it2.item_id
+        LEFT JOIN tags t2 ON it2.tag_id = t2.id
+        WHERE t.name = ?
+        GROUP BY i.id
+        ORDER BY i.date ASC
+        """,
+        (tag_name,)
+    )
+    
+    rows = cursor.fetchall()
+    
+    # Build content
+    lines = [
+        f"# Course: {course_name}",
+        "",
+        f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
+        "",
+        f"Total: {len(rows)} items",
+        "",
+    ]
+    
+    for date, source_path, block_id, item_type, tags in rows:
+        # Format: - 2025-12-14 [learning]: ![[00.daily/2025-12-14.md#^20251214-l1]]
+        tag_str = ""
+        if tags:
+            # Show all tags except the current course tag
             other_tags = [tag for tag in tags.split() if tag != tag_name]
             if other_tags:
                 tag_str = " " + " ".join(f"#{tag}" for tag in other_tags)
@@ -322,6 +411,31 @@ def build_all_indexes(vault_path: str, only: str = None) -> Tuple[int, int]:
                 
             except Exception as e:
                 logger.error(f"Failed to build book indexes: {e}")
+                errors += 1
+        
+        # Build course indexes
+        if only is None or only == 'courses':
+            try:
+                logger.info("Building course indexes...")
+                courses = get_course_list(conn)
+                courses_dir = os.path.join(index_dir, 'courses')
+                
+                for course_name in courses:
+                    try:
+                        content = build_course_index(conn, course_name)
+                        # Sanitize course name for filename
+                        safe_name = course_name.replace('/', '_').replace('\\', '_')
+                        course_path = os.path.join(courses_dir, f"{safe_name}.md")
+                        atomic_write(course_path, content)
+                        files_generated += 1
+                    except Exception as e:
+                        logger.error(f"Failed to build index for course '{course_name}': {e}")
+                        errors += 1
+                
+                logger.info(f"Created {len(courses)} course indexes in {courses_dir}")
+                
+            except Exception as e:
+                logger.error(f"Failed to build course indexes: {e}")
                 errors += 1
         
     finally:
