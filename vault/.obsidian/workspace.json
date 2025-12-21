@@ -27,83 +27,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99.system/docs/4.obsidian_setup.md",
+                "file": "00.daily/2025-12-21.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4.obsidian_setup"
-            }
-          },
-          {
-            "id": "2d57cda107752852",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01.index/actions.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "actions"
-            }
-          },
-          {
-            "id": "a31ec95aa1292e29",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00.daily/2025-12-13.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2025-12-13"
-            }
-          },
-          {
-            "id": "9f48675349519f73",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "view.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": true,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "view"
-            }
-          },
-          {
-            "id": "ae3a4461a1b1f25c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01.index/ideas.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "ideas"
+              "title": "2025-12-21"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -135,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#playwright",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -166,13 +99,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01.index/ideas.md",
+                "file": "00.daily/2025-12-21.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "ideasのアウトライン"
+              "title": "2025-12-21のアウトライン"
             }
           },
           {
@@ -196,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01.index/ideas.md",
+                "file": "00.daily/2025-12-21.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -206,7 +139,17 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "ideasへのバックリンク"
+              "title": "2025-12-21へのバックリンク"
+            }
+          },
+          {
+            "id": "ce1e394b5134d5a9",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           }
         ]
@@ -221,51 +164,63 @@
       "daily-notes:今日のデイリーノートを開く": false,
       "templates:テンプレートを挿入": false,
       "obsidian-memos:Thino": false,
-      "graph:グラフビューを開く": false
+      "graph:グラフビューを開く": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "obsidian-kanban:カンバンボードを新規作成": false
     }
   },
-  "active": "ae3a4461a1b1f25c",
+  "active": "7a1475cb9d6cbafe",
   "lastOpenFiles": [
-    "03.ideas/PlaywrightAgent-Clifor-Spec-Generator.md",
-    "03.ideas/Templates/Idea-Design.md",
-    "00.daily/Templates/README.md",
-    "99.system/docs/6.ai-idea-assistant.md",
+    "01.index/courses/Udemy_Ruby_Rails_SNS.md",
+    "00.daily/2025-12-14.md",
     "00.daily/2025-12-16.md",
-    "03.ideas/Templates",
-    "03.ideas",
-    "Dashboard.md",
+    "00.daily/2025-12-21.md",
+    "01.index/04.experiments.md",
+    "02.blog/02.published/2025-09-21-dataskillforqa-idea.md",
+    "02.blog/02.published/2025-09-21-fst-manualexploratorytesting.md",
+    "03.ideas/01.PlaywrightAgent-Clifor-Spec-Generator.md",
+    "03.ideas/Templates/Idea-Design.md",
+    "00.daily/templates/README.md",
+    "00.daily/templates/Daily Note.md",
+    "02.blog/Templates.md",
+    "02.blog/00.templates",
+    "00.daily/2025-12-13.md",
+    "01.index/00.dashboard.md",
+    "01.index/02.ideas.md",
+    "01.index/03.actions.md",
+    "view.md",
+    "無題のカンバン.md",
+    "03.ideas/kanban.md",
+    "02.blog/drafts/book-notes.md",
+    "Excalidraw/Drawing 2025-12-21 13.35.51.excalidraw.md",
+    "Excalidraw",
+    "01.index/01.learnings.md",
+    "99.system/docs/4.obsidian_setup.md",
+    "99.system/docs/tag-taxonomy.md",
     "無題のファイル.canvas",
+    "無題のファイル 1.canvas",
+    "無題のファイル 5.canvas",
     "無題のファイル 4.canvas",
     "無題のファイル 3.canvas",
     "無題のファイル 2.canvas",
-    "無題のファイル 1.canvas",
-    "00.daily/2025-12-13.md",
-    "00.daily/Templates/Daily with Idea.md",
-    "01.index/ideas.md",
-    "01.index/actions.md",
-    "00.daily/2025-12-14.md",
-    "view.md",
-    "00.daily/Templates/Daily with Experiment.md",
-    "01.index/courses/Udemy_Ruby_Rails_SNS.md",
-    "01.index/courses",
-    "00.daily/Templates/Daily Note.md",
-    "01.index/books/開発生産性の教科書.md",
-    "99.system/docs/5.ai-instructions.md",
-    "02.blog/published/2025-09-21-fst-manualexploratorytesting.md",
-    "02.blog/drafts/book-notes.md",
+    "04.catchup/clinicfor/screenshots/001-login-screen.png",
+    "01.index/actions-dv.md",
     "99.system/db/notes.sqlite-journal",
-    "99.system/docs/4.obsidian_setup.md",
-    "02.blog/published/2025-09-21-dataskillforqa-idea.md",
-    "99.system/docs/0.requirements.md",
-    "00.daily/Templates/Daily with Action.md",
-    "00.daily/Templates/Daily with Reading.md",
-    "99.system/docs/1.outline_design.md",
-    "99.system/docs/3.impl_steps.md",
-    "00.daily/Templates",
-    "99.system/logs/etl_errors.log",
-    "99.system/logs",
-    "99.system/db/notes.sqlite",
-    "99.system/db",
-    "99.system/docs"
+    "04.catchup/clinicfor/screenshots/003-home-screen-logged-in.png",
+    "04.catchup/clinicfor/screenshots/signup_exploration.png",
+    "04.catchup/clinicfor/screenshots/reservation_exploration.png",
+    "04.catchup/clinicfor/screenshots/003-home-screen.png",
+    "04.catchup/clinicfor/screenshots/008-account.png",
+    "04.catchup/clinicfor/screenshots/005-additional-delivery.png",
+    "04.catchup/clinicfor/screenshots/004-reservation-list.png",
+    "04.catchup/clinicfor/screenshots/011-reservation-internal.png",
+    "04.catchup/clinicfor/screenshots/007-health-log.png",
+    "04.catchup/clinicfor/screenshots",
+    "screenshots",
+    "04.catchup/clinicfor/spec/無題のフォルダ",
+    "04.catchup/clinicfor/screen_specifications",
+    "04.catchup/clinicfor",
+    "04.catchup",
+    "03.ideas/Templates"
   ]
 }
